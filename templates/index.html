@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+  <title>Code Giggles</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=1024, initial-scale=1">
+  <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.css') }}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/themify-icons/themify-icons.css') }}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/slick/slick.css') }}">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/Venobox/venobox.css') }}">
+  <!-- aos -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/aos/aos.css') }}">
+  <!-- Main Stylesheet -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+  <!-- <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon2.png') }}" type="image/x-icon"> -->
+
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    
+  <!-- JavaScript to detect dark mode and change favicon -->
+  <script>
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          // Dark mode is enabled, switch to the favicon for night/dark mode
+          document.querySelector("link[rel='icon']").href = "{{ url_for('static', filename='images/favicon2.png') }}";
+      }
+  </script>
+
+</head>
+
+<body>
+  <div class="social-bar" id="socialBar">
+    <a href="https://www.linkedin.com/in/disha-honmane-8503a1259/" target="_blank">
+      <button class="button">
+        <div class="bloom-container">
+          <div class="button-container-main">
+            <div class="button-inner">
+              <div class="back"></div>
+              <div class="front">
+                <svg viewBox="0 0 16 16" class="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="bi bi-linkedin">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
+              </div>
+            </div>
+            <div class="button-glass">
+              <div class="back"></div>
+              <div class="front"></div>
+            </div>
+          </div>
+          <div class="bloom bloom1"></div>
+          <div class="bloom bloom2"></div>
+        </div>
+      </button>
+    </a>
+
+    <a href="https://github.com/ShivDeeksha" target="_blank">
+      <button class="button">
+        <div class="bloom-container">
+          <div class="button-container-main">
+            <div class="button-inner">
+              <div class="back"></div>
+              <div class="front">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-github" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                </svg>
+              </div>
+            </div>
+            <div class="button-glass">
+              <div class="back"></div>
+              <div class="front"></div>
+            </div>
+          </div>
+          <div class="bloom bloom1"></div>
+          <div class="bloom bloom2"></div>
+        </div>
+      </button>
+    </a>
+
+    <!-- <a href="">
+      <button class="button">
+        <div class="bloom-container">
+          <div class="button-container-main">
+            <div class="button-inner">
+              <div class="back"></div>
+              <div class="front">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="svg" fill="#ffffff"
+                  class="bi bi-discord" viewBox="0 0 16 16">
+                  <path
+                    d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                </svg>
+              </div>
+            </div>
+            <div class="button-glass">
+              <div class="back"></div>
+              <div class="front"></div>
+            </div>
+          </div>
+          <div class="bloom bloom1"></div>
+          <div class="bloom bloom2"></div>
+        </div>
+      </button>
+    </a> -->
+
+    <a href="mailto:honmanedisha@outlook.com">
+      <button class="button" onclick="copyToClipboard('honmanedisha@outlook.com')">
+        <div class="bloom-container">
+          <div class="button-container-main">
+            <div class="button-inner">
+              <div class="back"></div>
+              <div class="front">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                  <path
+                    d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+                </svg>
+              </div>
+            </div>
+            <div class="button-glass">
+              <div class="back"></div>
+              <div class="front"></div>
+            </div>
+          </div>
+          <div class="bloom bloom1"></div>
+          <div class="bloom bloom2"></div>
+        </div>
+      </button>
+    </a>
+
+  </div>
+
+
+
+  <button class="topbutton" id="goToTopButton">
+    <svg class="topsvgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+      </path>
+    </svg>
+  </button>
+
+
+  <!-- navigation -->
+  <section class="fixed-top navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='images/giggles1 (1).png') }}" alt="logo" id="logo1">
+          <img src="{{ url_for('static', filename='images/giggles1.png') }}" id="logo2" class="hidden">
+
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar"
+          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar -->
+        <div class="collapse navbar-collapse text-center" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#feature">Feature</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Service</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link page-scroll" href="{{ url_for('blogs') }}">Blogs</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="{{ url_for('gallery') }}">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <!-- /navigation -->
+
+  <!-- hero area -->
+  <section class="hero-section hero" style="background-image: url('/static/images/giggleshero.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center zindex-1">
+          <h1 class="mb-30">Joyful Coding Adventures</h1>
+          <p class="mb-4">Welcome to CodeGiggles<br>where<b> Disha Chandrakant Honmane</b>, <b>Python
+                Developer</b> brings ideas to life through code.</p>
+          <a href="#"><button class="more-button2">
+              My Works
+              <div class="star-1">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-4">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-5">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-6">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </button></a>
+        </div>
+
+      </div>
+    </div>
+    <!-- background shapes -->
+    <div id="scene" class="shapes">
+      <img class="img-fluid hero-bg-1 img1 up-down-animation"
+        src="{{ url_for('static', filename='images/background-shape/happy.png') }}" alt="">
+      <img class="img-fluid hero-bg-2 left-right-animation"
+        src="{{ url_for('static', filename='images/background-shape/seo-ball-1.png') }}" alt="">
+      <img class="img-fluid hero-bg-3 left-right-animation"
+        src="{{ url_for('static', filename='images/background-shape/seo-half-cycle.png') }}" alt="">
+      <img class="img-fluid hero-bg-4 up-down-animation"
+        src="{{ url_for('static', filename='images/background-shape/green-dot.png') }}" alt="">
+      <img class="img-fluid hero-bg-5 img1 left-right-animation"
+        src="{{ url_for('static', filename='images/background-shape/smile.png') }}" alt="">
+      <img class="img-fluid hero-bg-6 img1 up-down-animation"
+        src="{{ url_for('static', filename='images/background-shape/giggles.png') }}" alt="">
+      <img class="img-fluid hero-bg-7 img2 left-right-animation"
+        src="{{ url_for('static', filename='images/background-shape/icecream1.png') }}" alt="">
+      <img class="img-fluid hero-bg-8 up-down-animation"
+        src="{{ url_for('static', filename='images/background-shape/service-half-cycle.png') }}" alt="">
+      <img class="img-fluid hero-bg-9 up-down-animation"
+        src="{{ url_for('static', filename='images/background-shape/seo-ball-1.png') }}" alt="">
+      <img class="img-fluid hero-bg-10 img2 up-down-animation"
+        src="{{ url_for('static', filename='images/background-shape/icecream2.png') }}" alt="">
+    </div>
+  </section>
+  <!-- /hero-area -->
+
+  <!-- marketing -->
+  <section class="section-lg seo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-61">
+          <div class="seo-image">
+            <img class="img-fluid" src="{{ url_for('static', filename='images/woman.jpg') }}" alt="form-img">
+          </div>
+        </div>
+        <div class="col-md-51">
+          <h2 class="section-title">Who am I?</h2>
+          <p>Hello! I'm Disha Chandrakant Honmane, a passionate third-year student pursuing Computer Science and
+            Engineering at SKN Sinhgad College. Coding and web development aren't just my studies but my greatest joys.
+            Python is my language of choice, and my future lies in the exciting realms of AI and ML. Beyond academics, I
+            excel in teaching programming languages and possess artistic skills that contribute to my creative
+            problem-solving approach. Crafting websites is my forte, and with a flair for the arts, I bring creativity
+            and a unique perspective to the tech world.
+          </p>
+          <a href="{{ url_for('resume') }}" target="_blank">
+            <div class="sp">
+
+              <button class="sparkle-button">
+                <span class="spark"></span>
+
+                <span class="backdrop"></span>
+                <svg class="sparkle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span class="text">Résumé</span>
+              </button>
+              <div class="bodydrop"></div>
+              <span aria-hidden="true" class="particle-pen">
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg><svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.937 3.846L7.75 1L8.563 3.846C8.77313 4.58114 9.1671 5.25062 9.70774 5.79126C10.2484 6.3319 10.9179 6.72587 11.653 6.936L14.5 7.75L11.654 8.563C10.9189 8.77313 10.2494 9.1671 9.70874 9.70774C9.1681 10.2484 8.77413 10.9179 8.564 11.653L7.75 14.5L6.937 11.654C6.72687 10.9189 6.3329 10.2494 5.79226 9.70874C5.25162 9.1681 4.58214 8.77413 3.847 8.564L1 7.75L3.846 6.937C4.58114 6.72687 5.25062 6.3329 5.79126 5.79226C6.3319 5.25162 6.72587 4.58214 6.936 3.847L6.937 3.846Z"
+                    fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- background image -->
+    <!-- <img class="img-fluid seo-bg" src="{{ url_for('static', filename='images/backgrounds/so-bg.png') }}" alt="seo-bg"> -->
+    <!-- background-shape -->
+    <img class="seo-bg-shape-3 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/spring.gif') }}" alt="bg-shape">
+    <img class="seo-bg-shape-2 left-right-animation"
+      src="{{ url_for('static', filename='images/background-shape/torus.gif') }}" alt="bg-shape">
+    <img class="seo-bg-shape-1 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/team-bg-triangle.png') }}" alt="bg-shape">
+
+  </section>
+  <!-- /marketing -->
+  <section class="">
+    <div class="container">
+
+      <div class="row1">
+        <div class="col col_7 col_desktop-12 order-desktop-2">
+          <div class="photo-list main-photo">
+            <div class="photo-item main-photo-item main-photo-item-1">
+              <div class="photo-info wysiwyg">Miss Sinhgad (2k23 & 2k24)</div>
+
+              <div class="photo-img">
+                <div class="photo-img__block">
+                  <img src="{{ url_for('static', filename='images/2k233.jpg') }}" alt="main-page-1">
+                </div>
+              </div>
+            </div>
+            <div class="photo-item main-photo-item main-photo-item-2">
+              <div class="photo-img">
+                <div class="photo-img__block">
+                  <img src="{{ url_for('static', filename='images/hack.jpg') }}" alt="main-page-2">
+                </div>
+              </div>
+              <div class="photo-info wysiwyg">Rank 3 MITCORER Hackathon(2k24)</div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col col_5 col_desktop-12 order-desktop-1">
+          <div class="main-container">
+            <h2 class="section-title">My Proud Moments</h2>
+            <p>
+              Throughout my journey in computer science, I've achieved notable milestones. Winning the MITCORER
+              state-level Hackathon showcased my problem-solving prowess. Receiving the "Miss Sinhgad" title for two
+              consecutive years highlighted my leadership skills. My artistic talent was recognized in a
+              Drawing/Painting Contest. Presentations on Disaster Management using AI and Sustainable Energy underscored
+              my versatility. Earning HackerRank's Golden Batch in Python Programming affirmed my technical proficiency.
+              These achievements reflect my multifaceted skills and dedication in technology and creativity.
+            </p>
+            <button class="more-button">
+              View All
+              <div class="star-1">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-4">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-5">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-6">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="seo1-bg-shape-1 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/badge.png') }}" alt="bg-shape">
+    <img class="seo1-bg-shape-2 left-right-animation"
+      src="{{ url_for('static', filename='images/background-shape/cup.png') }}" alt="bg-shape">
+    <img class="seo1-bg-shape-3 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/seo-ball-1.png') }}" alt="bg-shape">
+    <img class="seo1-bg-shape-4 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/blue-half-cycle.png') }}" alt="bg-shape">
+    <img class="seo1-bg-shape-5 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/green-dot.png') }}" alt="bg-shape">
+    <img class="seo1-bg-shape-6 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/green-dot.png') }}" alt="bg-shape">
+    <!-- <img class="seo1-bg-shape-7 up-down-animation"
+    src="{{ url_for('static', filename='images/background-shape/bg.png') }}" alt="bg-shape"> -->
+  </section>
+  <!-- feature -->
+  <section class="section-lg feature mb-0" id="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">What I Bring</h2>
+          <p class="mb-1001">Distinguished by a harmonious fusion of technical mastery, leadership finesse, effective
+            communication, and a rapid learning curve—a well-rounded professional poised for dynamic contributions
+            <br><br><b>Tech Toolbox</b>  
+          </p>
+            
+        </div>
+        <!-- feature item -->
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/python.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Python</h5>
+              <p>Intermediate</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/django.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>DJango</h5>
+              <p>Intermediate</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/flask.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Flask</h5>
+              <p>Intermediate</p>
+            </div>
+          </div>
+        </div>
+        <!-- feature item -->
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/mysql.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>My Sql</h5>
+              <p>Intermediate</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/mongo.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Mongo DB</h5>
+              <p>Beginner</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/htmlcss.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>HTML/CSS</h5>
+              <p>Advance</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/aws.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>AWS</h5>
+              <p>Beginner</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/spline.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Spline 3D</h5>
+              <p>Advance</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/hackerrank.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>HackerRank</h5>
+              <p>Intermediate</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 text-center">
+          <p class="mb-1001">
+            <br><b>Soft Skills Canvas</b>
+          </p>
+            
+        </div>
+        <div class="col-md-5 mb-80">
+          <div class="softcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/communication.png') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Communication</h5>
+              <p>Impressive Presentations<br>
+                Technical Documentation<br>
+                Public Speaking</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-5 mb-80">
+          <div class="softcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/leader.png') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Leadership
+
+                </h5>
+              <p>Team Collaboration<br>
+                Project Coordination<br>
+                Decision-making</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Card 2 -->
+        <div class="col-md-5 mb-80">
+          <div class="softcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/project1.png') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Project Management</h5>
+              <p>Agile Methodology<br>
+                Time and Task Management<br>
+                Problem-solving</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-md-5 mb-80">
+          <div class="softcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/project2..png') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Project Design
+                </h5>
+              <p>UX/UI Consideration<br>
+                Scalable Architecture<br>
+                User-Centric Approach</p>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    <img class="feature-bg-1 up-down-animation"
+      src="{{ url_for('static' , filename='images/background-shape/skill2.png') }}" alt="bg-shape">
+      <img class="feature-bg-2 left-right-animation"
+      src="{{ url_for('static', filename='images/background-shape/skill3.png') }}" alt="bg-shape">    
+      <img class="feature-bg-3 left-right-animation"
+      src="{{ url_for('static', filename='images/background-shape/skill.png') }}" alt="bg-shape">
+  </section>
+  <!-- /feature -->
+
+  <!-- service -->
+  <section class="section-lg service">
+    <div class="col-lg-12 text-center">
+      <h2 class="section-title">My Web Alchemy</h2>
+      <br><br>
+    </div>
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-md-52 order-2 order-md-1">
+          <h4 class="section-title">CodeGiggles- Developer Portfolio</h4>
+          <p class="mb-4">Introducing "CodeGiggles - My Developer Portfolio." Built with Flask, HTML, CSS, and JavaScript, this website showcases my coding journey. You'll find 3D assets created by me using splines, adding a unique touch. Explore my projects, blogs, and get to know my coding style. Dive into the world of CodeGiggles, where simplicity meets creativity in every line of code.
+            <br><b>Duration: </b>(Feb 2024 - March 2024)
+          </p>
+          <ul class="pl-0 service-list">
+            <li><i class="ti-layout-tab-window text-purple"></i>3D Animations made from scratch</li>
+            <li><i class="ti-layout-tab-window text-purple"></i>Blogs</li>
+            <li><i class="ti-layout-tab-window text-purple"></i>Viewing Now...</li>
+          </ul><br><br>
+        </div>
+        <div class="col-md-71 order-1 order-md-2">
+          <img class="img-fluid layer-3" src="{{ url_for('static', filename='images/codeGiggles.png') }}"
+            alt="service">
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-md-72 order-1 order-md-1">
+          <img class="img-fluid layer-3" src="{{ url_for('static', filename='images/sonamata.png') }}"
+            alt="service">
+          
+        </div>
+        <div class="col-md-52 order-2 order-md-2">
+          <h4 class="section-title">Sonamata Prashala- School Site</h4>
+          <p class="mb-4">
+          Introducing "Sonamata Prashala Website Project" — a dynamic and responsive web platform crafted using Django, HTML, CSS, and JavaScript. This sponsored project serves as an informational hub for Sonamata Prashala, providing a seamless experience for visitors to explore details about the school, connect with them for admissions, and facilitate donations from generous benefactors.
+        <br><b>Duration: </b>(Feb 2024- Ongoing)</p>
+          <ul class="pl-0 service-list">
+            <li><i class="ti-layout-tab-window text-purple"></i>Sponsor Project</li>
+            <li><i class="ti-layout-tab-window text-purple"></i>Responsive on any device</li>
+            <li><i class="ti-layout-tab-window text-purple"></i>Launching Soon...</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-md-52 order-2 order-md-1">
+          <h4 class="section-title">Algosys- Interactive DSA Learning Platform</h4>
+          <p class="mb-4">Crafted with HTML, CSS, and JavaScript, it provides a smooth coding experience via Ace Editor. The unique touch? Striking 3D animations using Spline 3D, making learning both dynamic and visually compelling.
+            <br><b>Duration: </b>(Sep 2023 - Nov 2023)
+          </p>
+          <ul class="pl-0 service-list">
+            <li><i class="ti-layout-tab-window text-purple"></i>3D Animations made from scratch</li>
+            <li><i class="ti-layout-tab-window text-purple"></i>Blogs on Data Structures</li>
+            <li><i class="ti-layout-tab-window text-purple"></i>Inbuilt Compilers for major languages</li>
+          </ul><br><br>
+        </div>
+        <div class="col-md-71 order-1 order-md-2">
+          <img class="img-fluid layer-3" src="{{ url_for('static', filename='images/algosys.png') }}"
+            alt="service">
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-md-72 order-1 order-md-1">
+          <img class="img-fluid layer-3" src="{{ url_for('static', filename='images/shivdeeksha.png') }}"
+            alt="service">
+        </div>
+        <div class="col-md-52 order-2 order-md-2">
+          <h4 class="section-title">ShivDeeksha- Artist Portfolio</h4>
+          <p class="mb-4">
+            Presenting "ShivDeeksha - Artist Portfolio," a project I personally crafted using HTML, CSS, and JavaScript. This dynamic online portfolio showcases my artistic endeavors, blending interactive design elements with a visually appealing presentation. Dive into the world of my creations and experience the essence of my art through this unique and self-designed platform.
+            <br><b>Duration: </b>(Aug 2023 - Aug 2023)
+          </p>
+          <ul class="pl-0 service-list">
+            <li><i class="ti-layout-tab-window text-purple"></i>Personal Artist Portfolio</li>
+            <li><i class="ti-layout-tab-window text-purple"></i>Blogs</li>
+            <li><i class="ti-layout-tab-window text-purple"></i><a href="https://shivdeeksha.000webhostapp.com/" target="_blank">View Now</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- background image -->
+
+    <!-- background shapes -->
+    <img class="service-bg-shape-1 up-down-animation"
+      src="{{ url_for('static', filename='images/projectbg1.png') }}" alt="background-shape">
+    <img class="service-bg-shape-2 left-right-animation"
+      src="{{ url_for('static', filename='images/projectbg2.png') }}" alt="background-shape">
+      <img class="service-bg-shape-3 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/torus.gif') }}" alt="background-shape">
+      <img class="service-bg-shape-4 left-right-animation"
+      src="{{ url_for('static', filename='images/projectbg1.png') }}" alt="background-shape">
+  </section>
+  <!-- /service -->
+
+
+  
+ 
+
+
+
+  <!-- team -->
+  <section class="section-lg team" id="team">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">What they say..</h2>
+          <p class="mb-100">Insights from those who have witnessed my dedication and potential firsthand.</p>
+        </div>
+      </div>
+      <div class="col-10 mx-auto">
+        <div class="team-slider">
+          <!-- team-member -->
+          <div class="team-member">
+            <div class="d-flex flex-column align-items-center mb-4">
+              <div class="mb-3">
+                <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/katekar sir.jpeg') }}" alt="team-member">
+              </div>
+              <div class="text-center">
+                <h4>Dr. Sameer Katekar</h4>
+                <h6 class="text-color">TPO <br>SKNSCOE</h6>
+              </div>
+            </div>
+            <p>Disha is one of the active, dynamic, sincere, devoted, dedicated, and hardworking students who is very passionate to start her career in the software industry with full enthusiasm. She is very productive from day one and ready to contribute heavily to industry growth. I wish her all the best for her future.</p>
+
+          </div>
+          <div class="team-member">
+            <div class="d-flex flex-column align-items-center mb-4">
+              <div class="mb-3">
+                <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/Pingle Sir.jpg') }}" alt="team-member">
+              </div>
+              <div class="text-center">
+                <h4>Mr. Subhash Pingale</h4>
+                <h6 class="text-color">HOD -(CSE)<br>SKNSCOE</h6>
+              </div>
+            </div>
+            <p>Disha's academic record speaks volume about her commitment to learning,her consistent excellence, reflected in her impressive grades and transcripts, testifies to her sharp intellect, inquisitiveness, and talent for solving complex problems</p>
+
+          </div>
+          <div class="team-member">
+            <div class="d-flex flex-column align-items-center mb-4">
+              <div class="mb-3">
+                <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/Jagadale Sir.jpeg') }}" alt="team-member">
+              </div>
+              <div class="text-center">
+                <h4>Prof. Balkrushna Jagadale</h4>
+                <h6 class="text-color">Assistant professor<br>SKNSCOE</h6>
+              </div>
+            </div>
+            <p>Disha is an innovative and creative person. Very clear that she enjoy solving problems in different ways and using her creativity and innovation to develop new ideas and do well in college. She is a fantastic listener and very open to learning and uses these to improve her studies. She follow directions perfectly, and keeps improving. It's noticeable she takes pride in her work. She has impressive confidence in her academics. Self-confidence is a great trait to have.</p>
+          </div>
+          <div class="team-member">
+            <div class="d-flex flex-column align-items-center mb-4">
+              <div class="mb-3">
+                <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/Aishwarya.jpeg') }}" alt="team-member">
+              </div>
+              <div class="text-center">
+                <h4>Miss Aishwarya Asabe</h4>
+                <h6 class="text-color">Student <br>SKNSCOE</h6>
+              </div>
+            </div>
+            <p>Disha is an exceptional leader, guiding and teaching in the best way possible. Her enthusiasm is infectious, and she brings a disciplined approach to every task. As a leader, she fosters team collaboration, ensuring every member is involved, resulting in both individual and overall growth. A valuable asset to any team.</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- backgound image -->
+    <img src="{{ url_for('static', filename='images/background-shape/') }}" alt=""
+      class="img-fluid team-bg">
+    <!-- background shapes -->
+    <img class="team-bg-shape-1 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/.png') }}" alt="">
+    <img class="team-bg-shape-2 left-right-animation"
+      src="{{ url_for('static', filename='images/background-shape/.png') }}" alt="">
+    <img class="team-bg-shape-3 left-right-animation"
+      src="{{ url_for('static', filename='images/background-shape/team-bg-triangle.png') }}" alt="">
+    <img class="team-bg-shape-4 up-down-animation img-fluid"
+      src="{{ url_for('static', filename='images/background-shape/.png') }}" alt="">
+
+  </section>
+  <!-- /team -->
+
+  <!-- pricing -->
+  <section class="section-lg pb-0 pricing" id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">Our Pricing</h2>
+          <p class="mb-50">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <br>
+            fugiat nulla pariatur. Excepteur sint occaecat </p>
+        </div>
+        <div class="col-lg-10 mx-auto">
+          <div class="row justify-content-center">
+            <!-- pricing table -->
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+              <div class="rounded text-center pricing-table table-1">
+                <h3>Free</h3>
+                <h1><span>$</span>00</h1>
+                <p>Far far away, behind the
+                  wordmountains, far from the
+                  countries Vokalia and
+                </p>
+                <a href="#" class="btn pricing-btn px-2">Get Started</a>
+              </div>
+            </div>
+            <!-- pricing table -->
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+              <div class="rounded text-center pricing-table table-2">
+                <h3>Standard</h3>
+                <h1><span>$</span>75</h1>
+                <p>Far far away, behind the
+                  wordmountains, far from the
+                  countries Vokalia and
+                </p>
+                <a href="#" class="btn pricing-btn px-2">Buy Now</a>
+              </div>
+            </div>
+            <!-- pricing table -->
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+              <div class="rounded text-center pricing-table table-3">
+                <h3>Premium</h3>
+                <h1><span>$</span>99</h1>
+                <p>Far far away, behind the
+                  wordmountains, far from the
+                  countries Vokalia and
+                </p>
+                <a href="#" class="btn pricing-btn px-2">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- background shapes -->
+    <img class="pricing-bg-shape-1 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/seo-ball-1.png') }}" alt="background-shape">
+    <img class="pricing-bg-shape-2 up-down-animation"
+      src="{{ url_for('static', filename='images/background-shape/seo-half-cycle.png') }}" alt="background-shape">
+    <img class="pricing-bg-shape-3 left-right-animation"
+      src="{{ url_for('static', filename='images/background-shape/team-bg-triangle.png') }}" alt="background-shape">
+
+  </section>
+  <!-- /pricing -->
+
+  <!-- client logo slider -->
+  <section class="section">
+    <div class="container">
+      <div class="client-logo-slider align-self-center">
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-1.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-2.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-3.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-4.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-5.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-1.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-2.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-3.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-4.png') }}" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="{{ url_for('static', filename='images/clients-logo/client-logo-5.png') }}" alt="client-logo"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- /client logo slider -->
+
+ 
+
+ <!-- contact -->
+<section class="section-lg contact">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <h2 class="section-title">Contact</h2>
+          </div>
+      </div>
+      <div class="row contact-bg p-5 rounded mb-5">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+              <form action="#">
+                  <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
+                  <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email">
+                  <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
+                  <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
+                  <button type="submit" value="send" class="btn btn-secondary">SEND MESSAGE</button>
+              </form>
+          </div>
+          <div class="col-lg-5">
+              <p class="mb-5">If you'll like to know more about our experience designing and delivering cloud solutions, or get advice on your own technology challenges get in touch. With dedicated engineers on-hand 24/7,      we’re set up to become an extension of your team.</p>
+              <a href="tel:+442081446356" class="text-color h5 d-block">+44 20 8144 6356</a>
+              <a href="mailto:info@altostack.io" class="mb-5 text-color h5 d-block">info@altostack.io</a>
+              <p>71 Shelton Street<br>London WC2H 9JQ England</p>
+          </div>
+      </div>
+      
+  </div>
+  <!-- background shapes -->
+  <img class="contact-bg-1 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="background-shape">
+  <img class="contact-bg-2 left-right-animation" src="images/background-shape/green-half-cycle.png" alt="background-shape">
+  <img class="contact-bg-3 up-down-animation" src="images/background-shape/green-dot.png" alt="background-shape">
+  <img class="contact-bg-4 left-right-animation" src="images/background-shape/service-half-cycle.png" alt="background-shape">
+  <img class="contact-bg-5 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="background-shape">
+</section>
+<!-- /contact -->
+  <!-- footer -->
+  <footer class="footer-section footer" style="background-image: url(/static/images/backgrounds/footer-bg.png);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+          <!-- logo -->
+          <a href="index.html">
+            <img class="img-fluid" src="{{ url_for('static', filename='images/giggles1 (1).png') }}" alt="logo">
+          </a>
+        </div>
+        <!-- footer menu -->
+        <nav class="col-lg-8 align-self-center mb-5">
+          <ul class="list-inline text-lg-right text-center footer-menu">
+            <li class="list-inline-item active"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a class="page-scroll" href="#feature">Feature</a></li>
+            <li class="list-inline-item"><a href="about.html">About</a></li>
+            <li class="list-inline-item"><a class="page-scroll" href="#team">Team</a></li>
+            <li class="list-inline-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
+            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- footer social icon -->
+        <nav class="col-12">
+          <ul class="list-inline text-lg-right text-center social-icon">
+            <li class="list-inline-item">
+              <a class="facebook" href="#"><i class="ti-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="black" href="#"><i class="ti-github"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <!-- jQuery -->
+  <script src="{{ url_for('static', filename='plugins/jQuery/jquery.min.js') }}"></script>
+  <!-- Bootstrap JS -->
+  <script src="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.js') }}"></script>
+  <!-- slick slider -->
+  <script src="{{ url_for('static', filename='plugins/slick/slick.min.js') }}"></script>
+  <!-- venobox -->
+  <script src="{{ url_for('static', filename='plugins/Venobox/venobox.min.js') }}"></script>
+  <!-- aos -->
+  <script src="{{ url_for('static', filename='plugins/aos/aos.js') }}"></script>
+  <!-- Main Script -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var navLinks = document.querySelectorAll(".navbar-light .navbar-nav .nav-link");
+      var logo1 = document.getElementById("logo1");
+      var logo2 = document.getElementById("logo2");
+
+      window.onscroll = function () {
+        // Change the color when scroll height is 70px
+        if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+          // Set the color to #000000 for navigation links
+          navLinks.forEach(function (link) {
+            link.style.color = "#000000";
+          });
+          // Set the second logo to be visible
+          logo2.style.display = "inline";
+          // Set the first logo to be hidden
+          logo1.style.display = "none";
+        } else {
+          // Reset to the initial color for navigation links
+          navLinks.forEach(function (link) {
+            link.style.color = "#e0e7fe";
+          });
+          // Set the first logo to be visible
+          logo1.style.display = "inline";
+          // Set the second logo to be hidden
+          logo2.style.display = "none";
+        }
+      };
+    });
+  </script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var socialBar = document.getElementById('socialBar');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        socialBar.style.left = '0';
+      } else {
+        socialBar.style.left = '-100px';
+      }
+    })
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const goToTopButton = document.getElementById("goToTopButton");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          goToTopButton.style.display = "block"; // Show the button
+        } else {
+          goToTopButton.style.display = "none"; // Hide the button
+        }
+      });
+
+      goToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top of the page
+      });
+    });
+  </script>
+  <script>
+    function copyToClipboard(email) {
+      // Create a temporary input element
+      var tempInput = document.createElement('input');
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      
+      // Select the email address
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999); /*For mobile devices*/
+    
+      // Copy to clipboard
+      document.execCommand('copy');
+      
+      // Remove the temporary input element
+      document.body.removeChild(tempInput);
+    
+      // Show an alert
+      alert('Email copied to clipboard: ' + email);
+    }
+    </script>
+   
+</body>
+
+</html>
