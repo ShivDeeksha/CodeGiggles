@@ -43,6 +43,7 @@
 </head>
 
 <body>
+  <div class="fade-in-content"> 
   <div class="social-bar" id="socialBar">
     <a href="https://www.linkedin.com/in/disha-honmane-8503a1259/" target="_blank">
       <button class="button">
@@ -179,10 +180,10 @@
               <a class="nav-link" href="{{ url_for('home') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link page-scroll" href="#feature">Feature</a>
+              <a class="nav-link page-scroll" href="#feature">Skills</a>
             </li>
 
             <li class="nav-item">
@@ -324,7 +325,7 @@
   <!-- /hero-area -->
 
   <!-- marketing -->
-  <section class="section-lg seo">
+  <section class="section-lg seo" id="about">
     <div class="container">
       <div class="row">
         <div class="col-md-61">
@@ -635,7 +636,41 @@
             </div>
           </div>
         </div>
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/spline.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>Spline 3D</h5>
+              <p>Advance</p>
+            </div>
+          </div>
+        </div>
         
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/hackerrank.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>HackerRank</h5>
+              <p>Intermediate</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-80">
+          <div class="skillcard">
+            <div class="icon">
+              <img src="{{ url_for('static', filename='images/htmlcss.gif') }}" alt="Your Icon">
+            </div>
+            <div class="content">
+              <h5>HTML/CSS</h5>
+              <p>Advance</p>
+            </div>
+          </div>
+        </div>
         <!-- Card 2 -->
         <div class="col-md-4 mb-80">
           <div class="skillcard">
@@ -687,18 +722,7 @@
           </div>
         </div>
         
-        <!-- Card 3 -->
-        <div class="col-md-4 mb-80">
-          <div class="skillcard">
-            <div class="icon">
-              <img src="{{ url_for('static', filename='images/htmlcss.gif') }}" alt="Your Icon">
-            </div>
-            <div class="content">
-              <h5>HTML/CSS</h5>
-              <p>Advance</p>
-            </div>
-          </div>
-        </div>
+        
 
         <div class="col-md-4 mb-80">
           <div class="skillcard">
@@ -711,29 +735,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-80">
-          <div class="skillcard">
-            <div class="icon">
-              <img src="{{ url_for('static', filename='images/spline.gif') }}" alt="Your Icon">
-            </div>
-            <div class="content">
-              <h5>Spline 3D</h5>
-              <p>Advance</p>
-            </div>
-          </div>
-        </div>
         
-        <div class="col-md-4 mb-80">
-          <div class="skillcard">
-            <div class="icon">
-              <img src="{{ url_for('static', filename='images/hackerrank.gif') }}" alt="Your Icon">
-            </div>
-            <div class="content">
-              <h5>HackerRank</h5>
-              <p>Intermediate</p>
-            </div>
-          </div>
-        </div>
         <div class="col-lg-12 text-center">
           <p class="mb-1001">
             <br><b>Soft Skills Canvas</b>
@@ -924,6 +926,21 @@
       <div class="col-10 mx-auto">
         <div class="team-slider">
           <!-- team-member -->
+          <div class="team-member">
+            <div class="d-flex flex-column align-items-center mb-4">
+              <div class="mb-3">
+                <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/kulkarni sir.jpeg') }}" alt="team-member">
+              </div>
+              <div class="text-center">
+                <h4>Mr. Swanand Kulkarni</h4>
+                <h6 class="text-color">Vice Principal <br>SKNSCOE</h6>
+              </div>
+            </div>
+            <p>
+              Disha is a sincere, hardworking, has positive attitude and inspired candidate but Parent and teachers cannot write few words about this students. Ocean can't be taken in small pot.
+            </p>
+
+          </div>
           <div class="team-member">
             <div class="d-flex flex-column align-items-center mb-4">
               <div class="mb-3">
@@ -1165,7 +1182,7 @@
     </div>
   </footer>
   <!-- /footer -->
-
+</div>
   <!-- jQuery -->
   <script src="{{ url_for('static', filename='plugins/jQuery/jquery.min.js') }}"></script>
   <!-- Bootstrap JS -->

@@ -13,10 +13,10 @@
   // team slider
   $('.team-slider').slick({
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 1000,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
@@ -45,7 +45,9 @@
       }
     ]
   });
-
+  setTimeout(function() {
+    $('.team-slider').slick('slickPlay');
+}, 100);
   // clients logo slider
   $('.client-logo-slider').slick({
     infinite: true,

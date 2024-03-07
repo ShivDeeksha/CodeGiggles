@@ -1,9 +1,12 @@
 from flask import Flask, render_template, send_file
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
+@app.route('/')
+def loader():
+    return render_template('loader.html')
 
 @app.route('/gallery')
 def gallery():
