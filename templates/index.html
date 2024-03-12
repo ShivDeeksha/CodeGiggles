@@ -159,7 +159,6 @@
     </svg>
   </button>
 
-
   <!-- navigation -->
   <section class="fixed-top navigation">
     <div class="container">
@@ -731,11 +730,11 @@
         <div class="col-md-4 mb-80">
           <div class="skillcard">
             <div class="icon">
-              <img src="{{ url_for('static', filename='images/aws.gif') }}" alt="Your Icon">
+              <img src="{{ url_for('static', filename='images/git.gif') }}" alt="Your Icon">
             </div>
             <div class="content">
-              <h5>AWS</h5>
-              <p>Beginner</p>
+              <h5>GitHub</h5>
+              <p>Intermediate</p>
             </div>
           </div>
         </div>
@@ -1047,19 +1046,18 @@
 
   <!-- /client logo slider -->
 
- 
-
- <!-- contact -->
+  <!-- contact -->
 <section class="section-lg contact" id="contact">
   <div class="container">
       <div class="row">
           <div class="col-lg-12 text-center">
               <h2 class="section-title">Drop Me a Line</h2>
           </div>
+          
       </div>
       <div class="row contact-bg p-5 rounded mb-5">
           <div class="col-lg-7 mb-4 mb-lg-0">
-              <form action="#">
+              <form id="email-form" action="#" method="post" onsubmit="handleFormSubmission()">
                   <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
                   <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email">
                   <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
@@ -1147,7 +1145,10 @@
               </div>
             </button></a>
               </form>
-          </div>
+              <div id="email-successful" data-success="{{ 'true' if email_sent_successfully else 'false' }}"></div>
+
+              <input type="hidden" id="email-form-submitted" data-submitted="false">
+            </div>
           <div class="col-lg-5">
               <p class="mb-5">Enjoying Code Giggles? Your feedback matters! Feel free to share your thoughts, reviews, and suggestions about my portfolio. If you're interested in collaborating on exciting projects, drop me a message. Let's connect and create something amazing together! 🚀✨</p>
               <a href="#" class="text-color h5 d-block">Mail</a>
@@ -1206,6 +1207,29 @@
   <script src="{{ url_for('static', filename='plugins/aos/aos.js') }}"></script>
   <!-- Main Script -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('email-form');
+      form.addEventListener('submit', function(event) {
+        var emailSentSuccessfully = document.getElementById('email-successful').getAttribute('data-success') === 'true';
+
+        if (emailSentSuccessfully) {
+          showAlert('Email sent successfully!');
+        } else {
+          showAlert('Failed to send email. Please try again later.');
+        }
+        
+        // Submit the form after showing the alert
+        form.submit();
+      });
+
+      // Function to show alert
+      function showAlert(message) {
+        alert(message);
+      }
+    });
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       var navLinks = document.querySelectorAll(".navbar-light .navbar-nav .nav-link");
