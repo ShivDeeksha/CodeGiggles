@@ -3,9 +3,9 @@ from flask_mail import Mail,Message
 import os
 
 app = Flask(__name__)
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 app.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
 app.config['MAIL_PORT'] = 587
@@ -35,7 +35,7 @@ def home():
             email_sent_successfully = True
         except Exception as e:
             print(e)  # Log the error for debugging
-
+            email_sent_successfully = False
     return render_template('index.html', email_sent_successfully=email_sent_successfully)
 
 @app.route('/')
