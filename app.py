@@ -7,36 +7,36 @@ app = Flask(__name__)
 
 # load_dotenv()
 
-app.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-# app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] =  os.environ.get('smtp_username')
-app.config['MAIL_PASSWORD'] =  os.environ.get('smtp_password')
+# app.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
+# app.config['MAIL_PORT'] = 587
+# app.config['MAIL_USE_TLS'] = True
+# # app.config['MAIL_USE_SSL'] = False
+# app.config['MAIL_USERNAME'] =  os.environ.get('smtp_username')
+# app.config['MAIL_PASSWORD'] =  os.environ.get('smtp_password')
 
-mail=Mail(app)
-
-
+# mail=Mail(app)
 
 
-@app.route('/home', methods=['GET', 'POST'])
+
+
+@app.route('/home')
 def home():
-    email_sent_successfully=False
-    if request.method=='POST':
-        name=request.form.get('name')
-        email=request.form.get('mail')
-        subject1=request.form.get('subject')
-        message=request.form.get('message')
-        msg=Message(
-            subject="New Feedback from Giggles!!", body=f"Name: {name}\nE-mail: {email}\nSubject: {subject1}\n\n\n{message}", sender='honmanedisha@outlook.com', recipients=['honmanedisha@outlook.com']
-        )
-        try:
-            mail.send(msg)
-            email_sent_successfully = True
-        except Exception as e:
-            print(e)  # Log the error for debugging
-            email_sent_successfully = False
-    return render_template('index.html', email_sent_successfully=email_sent_successfully)
+    # email_sent_successfully=False
+    # if request.method=='POST':
+    #     name=request.form.get('name')
+    #     email=request.form.get('mail')
+    #     subject1=request.form.get('subject')
+    #     message=request.form.get('message')
+    #     msg=Message(
+    #         subject="New Feedback from Giggles!!", body=f"Name: {name}\nE-mail: {email}\nSubject: {subject1}\n\n\n{message}", sender='honmanedisha@outlook.com', recipients=['honmanedisha@outlook.com']
+    #     )
+    #     try:
+    #         mail.send(msg)
+    #         email_sent_successfully = True
+    #     except Exception as e:
+    #         print(e)  # Log the error for debugging
+    #         email_sent_successfully = False
+    return render_template('index.html')
 
 @app.route('/')
 def loader():
