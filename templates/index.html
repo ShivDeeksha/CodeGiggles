@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='plugins/aos/aos.css') }}">
   <!-- Main Stylesheet -->
   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
@@ -1212,29 +1213,48 @@
   <script src="{{ url_for('static', filename='plugins/aos/aos.js') }}"></script>
   <!-- Main Script -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
   <script>
- document.addEventListener('DOMContentLoaded', function () {
-      var form = document.getElementById('email-form');
+//  document.addEventListener('DOMContentLoaded', function () {
+//       var form = document.getElementById('email-form');
 
-      form.addEventListener('submit', function(event) {
-        var emailSentSuccessfully = document.getElementById('email-successful').getAttribute('data-success') === 'true';
+//       form.addEventListener('submit', function(event) {
+//         var emailSentSuccessfully = document.getElementById('email-successful').getAttribute('data-success') === 'true';
 
-        if (!emailSentSuccessfully) {
-          showAlert('Failed to send email. Please try again later.');
-          event.preventDefault();  // Prevent the form from submitting
-        }
-        else{
-          showAlert('Thank You So Much!');
-        }
-      });
+//         if (!emailSentSuccessfully) {
+//           showAlert('Failed to send email. Please try again later.');
+//           event.preventDefault();  // Prevent the form from submitting
+//         }
+//         else{
+//           showAlert('Thank You So Much!');
+//         }
+//       });
 
-      // Function to show alert
-      function showAlert(message) {
-        alert(message);
-      }
-    });
+//       // Function to show alert
+//       function showAlert(message) {
+//         alert(message);
+//       }
+//     });
+// document.addEventListener('DOMContentLoaded', function () {
+//     var form = document.getElementById('email-form');
+
+//     form.addEventListener('submit', function (event) {
+//       var emailSentSuccessfully = document.getElementById('email-successful').getAttribute('data-success') === 'true';
+
+//       if (!emailSentSuccessfully) {
+//         showNotification('Failed to send email. Please try again later.', 'error');
+//         event.preventDefault();  // Prevent the form from submitting
+//       }
+//     });
+
+//     // Function to show notification
+//     function showNotification(message, type) {
+//       toastr[type](message);
+//     }
+//   });
+
   </script>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       var navLinks = document.querySelectorAll(".navbar-light .navbar-nav .nav-link");
