@@ -1060,9 +1060,9 @@
       </div>
       <div class="row contact-bg p-5 rounded mb-5">
           <div class="col-lg-7 mb-4 mb-lg-0">
-              <form id="email-form" action="/home" method="post"  >
+              <form id="email-form" action="https://formspree.io/f/mvoeqdrz" method="POST"  >
                   <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
-                  <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email">
+                  <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">
                   <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
                   <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
                   <!-- <button type="submit" value="send" class="btn btn-secondary">SEND MESSAGE</button> -->
@@ -1148,10 +1148,10 @@
               </div>
             </button></a>
               </form>
-              <input type="hidden" id="email-form-submitted" data-submitted="false">
+              <!-- <input type="hidden" id="email-form-submitted" data-submitted="false">
 
               <div id="email-successful" data-success="{{ 'true' if email_sent_successfully else 'false' }}"></div>
-
+ -->
 
              
             </div>
