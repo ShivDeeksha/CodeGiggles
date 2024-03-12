@@ -180,14 +180,17 @@
               <a class="nav-link" href="{{ url_for('home') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
+              <a class="nav-link page-scroll" href="#about">About Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link page-scroll" href="#feature">Skills</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="service.html">Service</a>
+              <a class="nav-link page-scroll" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#team">Testimonials</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link page-scroll" href="{{ url_for('blogs') }}">Blogs</a>
@@ -196,7 +199,7 @@
               <a class="nav-link page-scroll" href="{{ url_for('gallery') }}">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link page-scroll" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -213,7 +216,7 @@
           <h1 class="mb-30">Joyful Coding Adventures</h1>
           <p class="mb-4">Welcome to CodeGiggles<br>where<b> Disha Chandrakant Honmane</b>, <b>Python
                 Developer</b> brings ideas to life through code.</p>
-          <a href="#"><button class="more-button2">
+          <a class="page-scroll" href="#projects"><button class="more-button2">
               My Works
               <div class="star-1">
                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
@@ -511,6 +514,7 @@
               my versatility. Earning HackerRank's Golden Batch in Python Programming affirmed my technical proficiency.
               These achievements reflect my multifaceted skills and dedication in technology and creativity.
             </p>
+            <a href="{{ url_for('gallery') }}">
             <button class="more-button">
               View All
               <div class="star-1">
@@ -592,7 +596,7 @@
                 </svg>
               </div>
             </button>
-
+            </a>
           </div>
         </div>
       </div>
@@ -810,14 +814,14 @@
     <img class="feature-bg-1 up-down-animation"
       src="{{ url_for('static' , filename='images/background-shape/skill2.png') }}" alt="bg-shape">
       <img class="feature-bg-2 left-right-animation"
-      src="{{ url_for('static', filename='images/background-shape/skill3.png') }}" alt="bg-shape">    
+      src="{{ url_for('static', filename='images/background-shape/feature-bg-2.png') }}" alt="bg-shape">    
       <img class="feature-bg-3 left-right-animation"
       src="{{ url_for('static', filename='images/background-shape/skill.png') }}" alt="bg-shape">
   </section>
   <!-- /feature -->
 
   <!-- service -->
-  <section class="section-lg service">
+  <section class="section-lg service" id="projects">
     <div class="col-lg-12 text-center">
       <h2 class="section-title">My Web Alchemy</h2>
       <br><br>
@@ -929,7 +933,6 @@
           <div class="team-member">
             <div class="d-flex flex-column align-items-center mb-4">
               <div class="mb-3">
-<<<<<<< HEAD
                 <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/kulkarni sir.jpeg') }}" alt="team-member">
               </div>
               <div class="text-center">
@@ -946,9 +949,6 @@
             <div class="d-flex flex-column align-items-center mb-4">
               <div class="mb-3">
                 <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/katekar sir.jpeg') }}" alt="team-member">
-=======
-                <img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/team/katekar Sir.jpeg') }}" alt="team-member">
->>>>>>> 877c766253c3899ce8568fc27515bd48e4e68e8c
               </div>
               <div class="text-center">
                 <h4>Dr. Sameer Katekar</h4>
@@ -1015,70 +1015,10 @@
   </section>
   <!-- /team -->
 
-  <!-- pricing -->
-  <section class="section-lg pb-0 pricing" id="pricing">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-title">Our Pricing</h2>
-          <p class="mb-50">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <br>
-            fugiat nulla pariatur. Excepteur sint occaecat </p>
-        </div>
-        <div class="col-lg-10 mx-auto">
-          <div class="row justify-content-center">
-            <!-- pricing table -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-              <div class="rounded text-center pricing-table table-1">
-                <h3>Free</h3>
-                <h1><span>$</span>00</h1>
-                <p>Far far away, behind the
-                  wordmountains, far from the
-                  countries Vokalia and
-                </p>
-                <a href="#" class="btn pricing-btn px-2">Get Started</a>
-              </div>
-            </div>
-            <!-- pricing table -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-              <div class="rounded text-center pricing-table table-2">
-                <h3>Standard</h3>
-                <h1><span>$</span>75</h1>
-                <p>Far far away, behind the
-                  wordmountains, far from the
-                  countries Vokalia and
-                </p>
-                <a href="#" class="btn pricing-btn px-2">Buy Now</a>
-              </div>
-            </div>
-            <!-- pricing table -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-              <div class="rounded text-center pricing-table table-3">
-                <h3>Premium</h3>
-                <h1><span>$</span>99</h1>
-                <p>Far far away, behind the
-                  wordmountains, far from the
-                  countries Vokalia and
-                </p>
-                <a href="#" class="btn pricing-btn px-2">Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- background shapes -->
-    <img class="pricing-bg-shape-1 up-down-animation"
-      src="{{ url_for('static', filename='images/background-shape/seo-ball-1.png') }}" alt="background-shape">
-    <img class="pricing-bg-shape-2 up-down-animation"
-      src="{{ url_for('static', filename='images/background-shape/seo-half-cycle.png') }}" alt="background-shape">
-    <img class="pricing-bg-shape-3 left-right-animation"
-      src="{{ url_for('static', filename='images/background-shape/team-bg-triangle.png') }}" alt="background-shape">
 
-  </section>
-  <!-- /pricing -->
 
   <!-- client logo slider -->
-  <section class="section">
+  <!-- <section class="section">
     <div class="container">
       <div class="client-logo-slider align-self-center">
         <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
@@ -1103,18 +1043,18 @@
             src="{{ url_for('static', filename='images/clients-logo/client-logo-5.png') }}" alt="client-logo"></a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- /client logo slider -->
 
  
 
  <!-- contact -->
-<section class="section-lg contact">
+<section class="section-lg contact" id="contact">
   <div class="container">
       <div class="row">
           <div class="col-lg-12 text-center">
-              <h2 class="section-title">Contact</h2>
+              <h2 class="section-title">Drop Me a Line</h2>
           </div>
       </div>
       <div class="row contact-bg p-5 rounded mb-5">
@@ -1124,64 +1064,131 @@
                   <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email">
                   <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
                   <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
-                  <button type="submit" value="send" class="btn btn-secondary">SEND MESSAGE</button>
+                  <!-- <button type="submit" value="send" class="btn btn-secondary">SEND MESSAGE</button> -->
+                  <a href="#"><button type="submit" value="send" class="more-button2">
+              Drop Message</button>
+              <div class="star-1">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-4">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-5">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-6">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </button></a>
               </form>
           </div>
           <div class="col-lg-5">
-              <p class="mb-5">If you'll like to know more about our experience designing and delivering cloud solutions, or get advice on your own technology challenges get in touch. With dedicated engineers on-hand 24/7,      we’re set up to become an extension of your team.</p>
-              <a href="tel:+442081446356" class="text-color h5 d-block">+44 20 8144 6356</a>
-              <a href="mailto:info@altostack.io" class="mb-5 text-color h5 d-block">info@altostack.io</a>
-              <p>71 Shelton Street<br>London WC2H 9JQ England</p>
+              <p class="mb-5">Enjoying Code Giggles? Your feedback matters! Feel free to share your thoughts, reviews, and suggestions about my portfolio. If you're interested in collaborating on exciting projects, drop me a message. Let's connect and create something amazing together! 🚀✨</p>
+              <a href="#" class="text-color h5 d-block">Mail</a>
+              <a href=">honmanedisha@outlook.com" class="mb-5 text-color h6 d-block">honmanedisha@outlook.com</a>
+              <p>Sinhgad Institutes<br> Karad Road<br> Korti, Pandharpur</p>
           </div>
       </div>
       
   </div>
   <!-- background shapes -->
-  <img class="contact-bg-1 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="background-shape">
-  <img class="contact-bg-2 left-right-animation" src="images/background-shape/green-half-cycle.png" alt="background-shape">
-  <img class="contact-bg-3 up-down-animation" src="images/background-shape/green-dot.png" alt="background-shape">
-  <img class="contact-bg-4 left-right-animation" src="images/background-shape/service-half-cycle.png" alt="background-shape">
-  <img class="contact-bg-5 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="background-shape">
+  <img class="contact-bg-1 up-down-animation" src="{{ url_for('static', filename='images/background-shape/torus2.gif') }}" alt="background-shape">
+<img class="contact-bg-2 left-right-animation" src="{{ url_for('static', filename='images/background-shape/smile.png') }}" alt="background-shape">
+<img class="contact-bg-3 up-down-animation" src="{{ url_for('static', filename='images/background-shape/team-bg-triangle.png') }}" alt="background-shape">
+<img class="contact-bg-4 left-right-animation" src="{{ url_for('static', filename='images/background-shape/service-half-cycle.png') }}" alt="background-shape">
+<img class="contact-bg-5 up-down-animation" src="{{ url_for('static', filename='images/background-shape/feature-bg-2.png') }}" alt="background-shape">
+
 </section>
 <!-- /contact -->
   <!-- footer -->
-  <footer class="footer-section footer" style="background-image: url(/static/images/backgrounds/footer-bg.png);">
+  <footer class="footer-section footer" style="background-image: url(/static/images/footer.png);">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+        <div class="col-lg-3 text-center text-lg-left mb-4 mb-lg-0">
           <!-- logo -->
           <a href="index.html">
             <img class="img-fluid" src="{{ url_for('static', filename='images/giggles1 (1).png') }}" alt="logo">
           </a>
         </div>
         <!-- footer menu -->
-        <nav class="col-lg-8 align-self-center mb-5">
+        <nav class="col-lg-9 align-self-center mb-5">
           <ul class="list-inline text-lg-right text-center footer-menu">
-            <li class="list-inline-item active"><a href="index.html">Home</a></li>
-            <li class="list-inline-item"><a class="page-scroll" href="#feature">Feature</a></li>
-            <li class="list-inline-item"><a href="about.html">About</a></li>
-            <li class="list-inline-item"><a class="page-scroll" href="#team">Team</a></li>
-            <li class="list-inline-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
-            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#about">About Me</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#feature">Skills</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#projects">Projects</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#team">Testimonials</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#contact">Contact</a></li>
           </ul>
         </nav>
-        <!-- footer social icon -->
-        <nav class="col-12">
-          <ul class="list-inline text-lg-right text-center social-icon">
-            <li class="list-inline-item">
-              <a class="facebook" href="#"><i class="ti-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a class="black" href="#"><i class="ti-github"></i></a>
-            </li>
-          </ul>
-        </nav>
+        
       </div>
     </div>
   </footer>

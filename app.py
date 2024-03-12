@@ -22,7 +22,7 @@ def singleblog():
 
 @app.route('/resume')
 def resume():
-    return send_file('static/resume.pdf')
+    return send_file('static/Disha Honmane.pdf')
 
 if __name__ == '__main__':
     app.run(debug=False,host='0.0.0.0')

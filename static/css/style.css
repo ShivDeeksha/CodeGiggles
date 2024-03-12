@@ -686,7 +686,7 @@ a:hover {
 
 .nav-bg {
   background-color: #fff;
-  box-shadow: 0px 10px 20px 0px rgba(90, 0, 236, 0.07);
+  box-shadow: 0px 10px 20px 0px rgba(37, 37, 37, 0.07);
 }
 
 .nav-bg .navbar {
@@ -934,7 +934,7 @@ a:hover {
 
 .feature-bg-2 {
   position: absolute;
-  right:-10%;
+  right:-0%;
   bottom: 45%;
   z-index: -1;
   max-width: 30%;
@@ -1145,11 +1145,12 @@ a:hover {
 }
 
 .topbutton:hover {
-  width: 90px;
+  width: 70px;
   border-radius: 50px;
   transition-duration: 0.3s;
   background: linear-gradient(225deg, hsla(260, 96%, 40%, 0.742) 0%, hsl(260 97% 50% / 0.5) 70%);
   align-items: center;
+  text-align: center;
 }
 
 .topbutton:hover .topsvgIcon {
@@ -1163,7 +1164,7 @@ a:hover {
   bottom: -20px;
   content: "Top";
   color: white;
-  text-align: center;
+  text-align: center !important;
   /* transition-duration: .3s; */
   font-size: 0px;
 }
@@ -1172,6 +1173,7 @@ a:hover {
   font-size: 13px;
   opacity: 1;
   bottom: unset;
+  text-align: center !important;
   /* transform: translateY(-30px); */
   transition-duration: 0.3s;
 }
@@ -1658,12 +1660,15 @@ a:hover {
 }
 
 .footer-section {
-  padding-top: 500px;
-  padding-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 0px;
 }
-
+.footer img{
+  margin-top: 4%;
+  width: 70%;
+}
 .footer-menu a {
-  color: #091337;
+  color: #f8f8f8;
   display: block;
   padding: 15px;
   font-weight: 400;
@@ -1909,7 +1914,9 @@ textarea.form-control {
 }
 
 .contact-bg {
-  background-color: #f3f7fb;
+  background-color: #ffffff;
+  box-shadow: 0px 23px 43px 0px rgba(56, 56, 56, 0.149);
+
 }
 
 .round-icon {
@@ -1944,8 +1951,9 @@ textarea.form-control {
 
 .contact-bg-1 {
   position: absolute;
-  left: 0;
-  top: 10%;
+  left: 0%;
+  top: 25%;
+  width: 15%;
   z-index: -1;
 }
 
@@ -1957,8 +1965,9 @@ textarea.form-control {
 
 .contact-bg-2 {
   position: absolute;
-  top: 20%;
-  right: 10%;
+  top: 11%;
+  right: 6%;
+  height: 10%;
   z-index: -1;
 }
 
@@ -1970,7 +1979,7 @@ textarea.form-control {
 
 .contact-bg-3 {
   position: absolute;
-  top: 10%;
+  top: 1%;
   left: 40%;
   z-index: -1;
 }
@@ -2722,10 +2731,10 @@ width: 650px;
 
 .gallery-container h1 {
   text-align: center;
-  margin-top: 70px;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: bold;
-  color: #58595a;
+  margin-top: -120px;
+  margin-bottom: 100px;
+  color: #ffffff;
+  font-size: 1.6em;
 }
 
 .gallery-container p.page-description {
@@ -2739,26 +2748,36 @@ width: 650px;
 
 .tz-gallery {
   padding: 40px;
+  margin-left: -13.5%;
+  width: 1450px;
 }
 
 .tz-gallery .thumbnail {
-  padding: 0;
-  margin-bottom: 30px;
+  padding: 2%;
+  margin-bottom: 40px !important;
   border: none;
+  box-shadow: -10px -8px 8px #dddddd98, 8px 8px 10px #dddddd98;
+  border-radius: 5%;
+  margin: 0%;
+  
 }
 
 .tz-gallery img {
   border-radius: 2px;
+  width: 100%;
+  border-radius: 5%;
+  object-fit: cover;
+  max-height: 300px;
+  min-height: 300px;
 }
 
 .tz-gallery .caption{
-  padding: 26px 30px;
+  padding: 16px 10px;
   text-align: center;
 }
 
 .tz-gallery .caption h3 {
   font-size: 14px;
-  font-weight: bold;
   margin-top: 0;
 }
 

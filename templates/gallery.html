@@ -32,13 +32,13 @@
   <link rel="icon" href="{{ url_for('static', filename='images/favicon2.png') }}" type="image/x-icon"> -->
 
   <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
-    
+
   <!-- JavaScript to detect dark mode and change favicon -->
   <script>
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          // Dark mode is enabled, switch to the favicon for night/dark mode
-          document.querySelector("link[rel='icon']").href = "{{ url_for('static', filename='images/favicon2.png') }}";
-      }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // Dark mode is enabled, switch to the favicon for night/dark mode
+      document.querySelector("link[rel='icon']").href = "{{ url_for('static', filename='images/favicon2.png') }}";
+    }
   </script>
 
 </head>
@@ -160,6 +160,7 @@
   </button>
 
 
+
   <!-- navigation -->
   <section class="fixed-top navigation">
     <div class="container">
@@ -180,23 +181,26 @@
               <a class="nav-link" href="{{ url_for('home') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link page-scroll" href="{{ url_for('home') }}#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link page-scroll" href="#feature">Feature</a>
+              <a class="nav-link page-scroll" href="{{ url_for('home') }}#feature">Skills</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="service.html">Service</a>
+              <a class="nav-link page-scroll" href="{{ url_for('home') }}#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link page-scroll" href="{{ url_for('blogs') }}">Blogs</a>
+              <a class="nav-link page-scroll" href="{{ url_for('home') }}#team">Testimonials</a>
             </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link page-scroll" href="{{ url_for('blogs') }}">Blogs</a>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link page-scroll" href="{{ url_for('gallery') }}">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link page-scroll" href="{{ url_for('home') }}#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -204,10 +208,10 @@
     </div>
   </section>
   <!-- /navigation -->
-<!-- about us -->
-<!-- /navigation -->
-<section class="hero-section hero" style="background-image: url('/static/images/blogs.png'); margin-top: 0%;">
-  <!-- <div class="container">
+  <!-- about us -->
+  <!-- /navigation -->
+  <section class="hero-section hero" style="background-image: url('/static/images/blogs.png'); margin-top: 0%;">
+    <!-- <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center zindex-1">
          <h1 class="mb-30"><br><br><br><br></h1>
@@ -217,8 +221,8 @@
 
     </div>
   </div> -->
-  <!-- background shapes -->
-  <!-- <div id="scene" class="shapes">
+    <!-- background shapes -->
+    <!-- <div id="scene" class="shapes">
     <img class="img-fluid hero-bg-1 img1 up-down-animation"
       src="{{ url_for('static', filename='images/background-shape/happy.png') }}" alt="">
     <img class="img-fluid hero-bg-2 left-right-animation"
@@ -239,137 +243,179 @@
       src="{{ url_for('static', filename='images/background-shape/seo-ball-1.png') }}" alt="">
     <img class="img-fluid hero-bg-10 img2 up-down-animation"
       src="{{ url_for('static', filename='images/background-shape/icecream2.png') }}" alt=""> -->
-  </div>
-</section>
-<!-- /about us -->
+    </div>
+  </section>
+  <!-- /about us -->
 
 
-<div class="container gallery-container">
+  <div class="container gallery-container">
 
-  <h1>Giggle Gallery</h1>
+    <h1>Journey through moments</h1>
 
-  <p class="page-description text-center">Journey Through Moments</p>
-  
-  <div class="tz-gallery">
+
+    <div class="tz-gallery">
 
       <div class="row">
 
-          <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                  <a class="lightbox" href="../images/park.jpg">
-                      <img src="../images/park.jpg" alt="Park">
-                  </a>
-                  <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-              </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/hack.jpg') }}">
+              <img src="{{ url_for('static', filename='images/hack.jpg') }}" alt="Park">
+            </a>
+            <div class="caption">
+              <h3>MITCORER Hackathon</h3>
+              <p>Rank 3 in a state-level hackathon in agricultural domain.</p>
+            </div>
           </div>
-          <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                  <a class="lightbox" href="../images/bridge.jpg">
-                      <img src="../images/bridge.jpg" alt="Bridge">
-                  </a>
-                  <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-              </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/gift.jpg') }}">
+              <img src="{{ url_for('static', filename='images/gift.jpg') }}" alt="Park">
+            </a>
+            <div class="caption">
+              <h3>The Gift</h3>
+              <p>A birthday gift by me to the college Principal Dr. Kailash Karande.</p>
+            </div>
           </div>
-          <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                  <a class="lightbox" href="../images/tunnel.jpg">
-                      <img src="../images/tunnel.jpg" alt="Tuneel">
-                  </a>
-                  <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-              </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/2k233.jpg') }}">
+              <img src="{{ url_for('static', filename='images/2k233.jpg') }}" alt="Rails">
+            </a>
+            <div class="caption">
+              <h3>Personality Competition- "Miss Sinhgad"</h3>
+              <p>Entitled as Miss Sinhgad for the year 2023.</p>
+            </div>
           </div>
-          <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                  <a class="lightbox" href="../images/coast.jpg">
-                      <img src="../images/coast.jpg" alt="Coast">
-                  </a>
-                  <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-              </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/miss2k23-1.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/miss2k23-1.jpeg') }}" alt="Rails">
+            </a>
+            <div class="caption">
+              <h3>Personality Competition- "Miss Sinhgad"</h3>
+              <p>Entitled as Miss Sinhgad for the year 2023.<br><br></p>
+            </div>
           </div>
-          <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                  <a class="lightbox" href="../images/rails.jpg">
-                      <img src="../images/rails.jpg" alt="Rails">
-                  </a>
-                  <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-              </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/miss2k23.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/miss2k23.jpeg') }}" alt="Rails">
+            </a>
+            <div class="caption">
+              <h3>Personality Competition- "Miss Sinhgad"</h3>
+              <p>Entitled as Miss Sinhgad for the year 2023.<br><br></p>
+            </div>
           </div>
-          <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                  <a class="lightbox" href="../images/traffic.jpg">
-                      <img src="../images/traffic.jpg" alt="Traffic">
-                  </a>
-                  <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-              </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/mesa.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/mesa.jpeg') }}" alt="Park">
+            </a>
+            <div class="caption">
+              <h3>Speech Competition</h3>
+              <p>Runner up for speech competition on Role of Engineers in Disaster Management </p>
+            </div>
           </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/airforce.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/airforce.jpeg') }}" alt="Rails">
+            </a>
+            <div class="caption">
+              <h3>The Indian Airforce</h3>
+              <p>Meeting with the Indian Airforce and give away of two fine arts by ShivDeeksha FineArts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/airforce1.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/airforce2.jpeg') }}" alt="Rails">
+            </a>
+            <div class="caption">
+              <h3>The Indian Airforce</h3>
+              <p>Hosting the event to welcome The Indian Airforce.<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/krishna.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/krishna.jpeg') }}" alt="Park">
+            </a>
+            <div class="caption">
+              <h3>Vatsalya Sketch</h3>
+              <p>Capturing the profound bond of love between Maiya Yashoda and Little Krishna</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/eesa.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/eesa.jpeg') }}" alt="Park">
+            </a>
+            <div class="caption">
+              <h3>PPT Presentation Competition</h3>
+              <p>Runner up for the PPT Presentation Competition on Renewable Revolution</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a class="lightbox" href="{{ url_for('static', filename='images/dyf.jpeg') }}">
+              <img src="{{ url_for('static', filename='images/dyf.jpeg') }}" alt="Traffic">
+            </a>
+            <div class="caption">
+              <h3>Elocution Competition</h3>
+              <p>Rank 3 in English Elocution Competition spoke on the topic Sustainable Development</p>
+            </div>
+          </div>
+        </div>
+        
+
       </div>
 
-  </div>
-
-</div>
-
-<!-- footer -->
-<footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
-        <!-- logo -->
-        <a href="index.html">
-          <img class="img-fluid" src="images/logo.png" alt="logo">
-        </a>
-      </div>
-      <!-- footer menu -->
-      <nav class="col-lg-8 align-self-center mb-5">
-        <ul class="list-inline text-lg-right text-center footer-menu">
-          <li class="list-inline-item active"><a href="index.html">Home</a></li>
-          <li class="list-inline-item"><a class="page-scroll" href="#feature">Feature</a></li>
-          <li class="list-inline-item"><a href="about.html">About</a></li>
-          <li class="list-inline-item"><a class="page-scroll" href="#team">Team</a></li>
-          <li class="list-inline-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
-          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- footer social icon -->
-      <nav class="col-12">
-        <ul class="list-inline text-lg-right text-center social-icon">
-          <li class="list-inline-item">
-            <a class="facebook" href="#"><i class="ti-facebook"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a class="black" href="#"><i class="ti-github"></i></a>
-          </li>
-        </ul>
-      </nav>
     </div>
-  </div>
-</footer>
-<!-- /footer -->
 
-<script src="{{ url_for('static', filename='plugins/jQuery/jquery.min.js') }}"></script>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer-section footer" style="background-image: url(/static/images/footer.png);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 text-center text-lg-left mb-4 mb-lg-0">
+          <!-- logo -->
+          <a href="index.html">
+            <img class="img-fluid" src="{{ url_for('static', filename='images/giggles1 (1).png') }}" alt="logo">
+          </a>
+        </div>
+        <!-- footer menu -->
+        <nav class="col-lg-9 align-self-center mb-5">
+          <ul class="list-inline text-lg-right text-center footer-menu">
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#about">About Me</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#feature">Skills</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#projects">Projects</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#team">Testimonials</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li class="list-inline-item page-scroll"><a href="{{ url_for('home') }}#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <script src="{{ url_for('static', filename='plugins/jQuery/jquery.min.js') }}"></script>
   <!-- Bootstrap JS -->
   <script src="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.js') }}"></script>
   <!-- slick slider -->
@@ -443,25 +489,25 @@
       var tempInput = document.createElement('input');
       tempInput.value = email;
       document.body.appendChild(tempInput);
-      
+
       // Select the email address
       tempInput.select();
       tempInput.setSelectionRange(0, 99999); /*For mobile devices*/
-    
+
       // Copy to clipboard
       document.execCommand('copy');
-      
+
       // Remove the temporary input element
       document.body.removeChild(tempInput);
-    
+
       // Show an alert
       alert('Email copied to clipboard: ' + email);
     }
-    </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-   <script>
-       baguetteBox.run('.tz-gallery');
-   </script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  <script>
+    baguetteBox.run('.tz-gallery');
+  </script>
 </body>
 
 </html>
