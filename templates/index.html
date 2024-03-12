@@ -1060,13 +1060,13 @@
       </div>
       <div class="row contact-bg p-5 rounded mb-5">
           <div class="col-lg-7 mb-4 mb-lg-0">
-              <form id="email-form" action="https://formspree.io/f/mvoeqdrz" method="POST"  >
+              <form id="my-form" action="https://formspree.io/f/mvoeqdrz" method="POST"  >
                   <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
                   <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">
                   <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
                   <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
                   <!-- <button type="submit" value="send" class="btn btn-secondary">SEND MESSAGE</button> -->
-                  <a href="#"><button type="submit" value="send" class="more-button2">
+                  <a href="#"><button id="my-form-button" type="submit" value="send" class="more-button2">
               Drop Message</button>
               <div class="star-1">
                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
@@ -1146,7 +1146,8 @@
                   </g>
                 </svg>
               </div>
-            </button></a>
+            </button></a>  <p id="my-form-status"></p>
+
               </form>
               <!-- <input type="hidden" id="email-form-submitted" data-submitted="false">
 
@@ -1214,6 +1215,46 @@
   <!-- Main Script -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  
+  
+  
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
+
+  
+  
+  
+  
   <script>
 //  document.addEventListener('DOMContentLoaded', function () {
 //       var form = document.getElementById('email-form');
