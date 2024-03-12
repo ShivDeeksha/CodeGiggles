@@ -3,9 +3,9 @@ from flask_mail import Mail,Message
 import os
 
 app = Flask(__name__)
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 app.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
 app.config['MAIL_PORT'] = 587
