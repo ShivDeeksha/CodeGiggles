@@ -1147,11 +1147,12 @@
               </div>
             </button></a>
               </form>
+              <input type="hidden" id="email-form-submitted" data-submitted="false">
+
               <div id="email-successful" data-success="{{ 'true' if email_sent_successfully else 'false' }}"></div>
 
 
-              <input type="hidden" id="email-form-submitted" data-submitted="false">
-
+             
             </div>
           <div class="col-lg-5">
               <p class="mb-5">Enjoying Code Giggles? Your feedback matters! Feel free to share your thoughts, reviews, and suggestions about my portfolio. If you're interested in collaborating on exciting projects, drop me a message. Let's connect and create something amazing together! 🚀✨</p>
@@ -1213,14 +1214,20 @@
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var emailSentSuccessfully = document.getElementById('email-successful').getAttribute('data-success') === 'true';
+ document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('email-form');
 
-      if (emailSentSuccessfully) {
-        showAlert('Email sent successfully!');
-      } else {
-        showAlert('Failed to send email. Please try again later.');
-      }
+      form.addEventListener('submit', function(event) {
+        var emailSentSuccessfully = document.getElementById('email-successful').getAttribute('data-success') === 'true';
+
+        if (!emailSentSuccessfully) {
+          showAlert('Failed to send email. Please try again later.');
+          event.preventDefault();  // Prevent the form from submitting
+        }
+        else{
+          showAlert('Thank You So Much!');
+        }
+      });
 
       // Function to show alert
       function showAlert(message) {
