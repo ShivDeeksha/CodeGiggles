@@ -40,7 +40,7 @@ def home():
 
 @app.route('/')
 def loader():
-    return render_template('loader.html')
+    return render_template('index.html')
 
 @app.route('/gallery')
 def gallery():
@@ -56,8 +56,8 @@ def singleblog():
 
 @app.route('/resume')
 def resume():
-    return send_file('static/Disha Honmane.pdf')
+    return send_file('static/CSE_Disha Honmane.pdf')
 
 if __name__ == '__main__':
-    app.run(debug=False,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0')
     # app.run(debug=True)
